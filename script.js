@@ -1,7 +1,7 @@
 function generatePassword() {
     const length = document.getElementById('length').value;
     if (length > 60) {
-        document.getElementById('password-output').textContent = "אורך הסיסמה לא יכול לחרוג מ-60 תווים ";
+        document.getElementById('password-output').textContent = "Error! The limit is 60 characters ";
         updateStrengthMeter(0);
         document.getElementById('copy-button').style.display = 'none';
         return;
