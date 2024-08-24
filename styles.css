@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    direction: rtl;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+h1 {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin: 10px 0;
+    text-align: right;
+}
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    direction: rtl;
+}
+.options {
+    margin: 15px 0;
+    text-align: right;
+}
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5px 0;
+}
+.checkbox-wrapper label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.checkbox-wrapper input[type="checkbox"] {
+    margin: 0 5px 0 0; /* רווח מצד שמאל של הצ'קבוקס */
+}
+#uppercase-wrapper {
+    margin-left: 250px;
+}
+#lowercase-wrapper {
+    margin-left: 256px;
+}
+#numbers-wrapper {
+    margin-left: 290px;
+}
+#symbols-wrapper {
+    margin-left: 201px;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#password-output {
+    margin: 20px 0;
+    font-size: 1.5em;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    word-break: break-all;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+#copy-button {
+    margin: 10px 0;
+    display: none;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    background-color: #28a745;
+    position: relative;
+}
+.strength-meter {
+    height: 10px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.strength-meter-fill {
+    height: 100%;
+    width: 0;
+    transition: width 0.5s ease;
+}
+#checkmark {
+    display: none;
+    color: green;
+    font-size: 1.2em;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}

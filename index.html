@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מחולל סיסמאות חזקות</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>מחולל סיסמאות חזקות</h1>
+        <label for="length">אורך הסיסמה (עד 60 תווים):</label>
+        <input type="number" id="length" value="16" min="8" max="60">
+        
+        <div class="options">
+            <div id="uppercase-wrapper" class="checkbox-wrapper">
+                <label><input type="checkbox" id="include-uppercase" checked> אותיות גדולות (A-Z)</label>
+            </div>
+            <div id="lowercase-wrapper" class="checkbox-wrapper">
+                <label><input type="checkbox" id="include-lowercase" checked> אותיות קטנות (a-z)</label>
+            </div>
+            <div id="numbers-wrapper" class="checkbox-wrapper">
+                <label><input type="checkbox" id="include-numbers" checked> מספרים (0-9)</label>
+            </div>
+            <div id="symbols-wrapper" class="checkbox-wrapper">
+                <label><input type="checkbox" id="include-symbols" checked> תווים מיוחדים (!@#$%^&*)</label>
+            </div>
+        </div>
+
+        <button onclick="generatePassword()">צור סיסמה</button>
+        <div id="password-output"></div>
+        <button id="copy-button" onclick="copyPassword()">העתק סיסמה <span id="checkmark">✔</span></button>
+
+        <div class="strength-meter">
+            <div id="strength-meter-fill" class="strength-meter-fill"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
