@@ -1,7 +1,7 @@
 function generatePassword() {
     const length = document.getElementById('length').value;
     if (length > 60) {
-        document.getElementById('password-output').textContent = "םיוות 60-מ גורחל לוכי אל המסיסה ךרוא";
+        document.getElementById('password-output').textContent = "אורך הסיסמה לא יכול לחרוג מ-60 תווים ";
         updateStrengthMeter(0);
         document.getElementById('copy-button').style.display = 'none';
         return;
@@ -18,7 +18,7 @@ function generatePassword() {
     if (includeSymbols) charset += "!@#$%^&*()_-+=<>?";
 
     if (charset === "") {
-        document.getElementById('password-output').textContent = "אנא בחר לפחות סוג אחד של תווים.";
+        document.getElementById('password-output').textContent = "אנא בחרו לפחות סוג אחד של תווים.";
         updateStrengthMeter(0);
         document.getElementById('copy-button').style.display = 'none';
         return;
